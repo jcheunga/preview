@@ -4,5 +4,5 @@ npm-debug.log
 .idea
 public
 server/config/secrets.js
-rwn.sublime-project
-rwn.sublime-workspace
+.sublime-project
+.sublime-workspace
