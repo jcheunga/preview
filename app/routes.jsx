@@ -7,10 +7,11 @@ import Dashboard from 'components/Dashboard';
 import Change from 'components/Change';
 import Collection from 'components/change/Collection';
 import SingleCollection from 'components/change/SingleCollection';
+import NotFound from 'components/NotFound';
 
 export default (
   <Route component={App}>
-  	<NotFoundRoute handler={NotFound}/>
+  	<NotFoundRoute component={NotFound}/>
     <Route path="/" component={Change} />    
     <Route path="about" component={About} />
     <Route path="collections" component={Collection} />
