@@ -10,6 +10,7 @@ import SingleCollection from 'components/change/SingleCollection';
 
 export default (
   <Route component={App}>
+  	<NotFoundRoute handler={NotFound}/>
     <Route path="/" component={Change} />    
     <Route path="about" component={About} />
     <Route path="collections" component={Collection} />
