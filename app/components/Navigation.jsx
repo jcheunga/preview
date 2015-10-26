@@ -14,9 +14,9 @@ export default class Navigation extends React.Component {
           </div>
           <div>
             <ul className="nav navbar-nav navbar-right">
-              <li><Link to="/">Home</Link></li>                
+              <li><Link to="/">Home</Link></li>
               <li><Link to="/collections">Collections</Link></li>
-              <li><Link to="/about">About</Link></li>             
+              <li><Link to="/about">About</Link></li>
             </ul>
           </div>
         </div>

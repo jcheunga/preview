@@ -5,10 +5,6 @@ import { OverlayTrigger, Popover } from 'react-bootstrap';
 
 export default class CollectionGrid extends React.Component {
 
-	_increaseLike = () => {
-		CollectionsActions.increment(this.props.id);
-	}
-
 	render() {
 		let makejs = this.props.collection.toJS();
 		let scollection = makejs[0];
@@ -27,28 +23,32 @@ export default class CollectionGrid extends React.Component {
 					<dt>Price</dt>
 					<dd>${obj.price}</dd></Popover>}>
 					<p>{obj.name}</p>
-    			</OverlayTrigger>);
+					</OverlayTrigger>);
 			}
 		}
 
-		let singlecollectionid = '/collection/'+ this.props.id;
-		return (						
+		let singlecollectionid = '/collection/' + this.props.id;
+		return (
 			<div className="panel panel-default" key={this.props.id}>
-				<div className="panel-body">
-					<Link to={singlecollectionid}>
-						<div className="product-title"><span className="upper">Collection ID: {this.props.id}</span>						
-			      </div>
-		      </Link>
-		      <div className="sep-top-xs">{collectionnames}</div>
-		      <div className="product-detail">
-		      	<div><a className="cursorp"><i onClick={this._increaseLike} className="fa fa-heart fa-lg"></i></a>&nbsp;{this.props.likes}</div>
-		        <div className="price-shop text-right">
-		          <span>Total Collection Cost: </span><ins>${this.props.collectioncost}</ins>
-		        </div>
-		      </div>
-		    </div> 
-      </div>
+			<div className="panel-body">
+			<Link to={singlecollectionid}>
+			<div className="product-title"><span className="upper">Collection ID: {this.props.id}</span>
+			</div>
+			</Link>
+			<div className="sep-top-xs">{collectionnames}</div>
+			<div className="product-detail">
+			<div><a className="cursorp"><i onClick={this._increaseLike} className="fa fa-heart fa-lg"></i></a>&nbsp;{this.props.likes}</div>
+			<div className="price-shop text-right">
+			<span>Total Collection Cost: </span><ins>${this.props.collectioncost}</ins>
+			</div>
+			</div>
+			</div>
+			</div>
 		);
+	}
+
+	_increaseLike = () => {
+		CollectionsActions.increment(this.props.id);
 	}
 }
 
@@ -57,5 +57,6 @@ CollectionGrid.propTypes = {
 	id: React.PropTypes.string,
 	name: React.PropTypes.string,
 	collection: React.PropTypes.object,
-	collectioncost: React.PropTypes.string
+	collectioncost: React.PropTypes.string,
+	likes: React.PropTypes.number
 };

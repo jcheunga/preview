@@ -7,6 +7,3 @@ export default class CollectionFilters extends React.Component {
 		);
 	}
 }
-
-CollectionFilters.propTypes = {	
-};

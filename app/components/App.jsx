@@ -34,7 +34,7 @@ export default class App extends React.Component {
       }}>
         <Navigation />
         {this.props.children}
-        <Footer /> 
+        <Footer />
       </AltContainer>
       </div>
     );

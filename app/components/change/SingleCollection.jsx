@@ -1,14 +1,9 @@
 import React from 'react';
 import CollectionsActions from 'actions/CollectionsActions';
-import DoesNotExist from 'components/change/DoesNotExist';
 import SingleCollectionGrid from 'components/change/SingleCollectionGrid';
 import PreFooter from 'components/change/PreFooter';
 
 export default class SingleCollection extends React.Component { // FIND ID FROM COLLECTIONS IF IT DOESNT EXIST DISPLAY NO COLLECTION FOUND // ADD COMMENTS
-	
-	_increaseLike = () => {
-		CollectionsActions.increment(this.props.params.collectionId);
-	}
 
 	render() {
 		let scollection = this.props.CollectionsStore.allCollections.toJS();
@@ -36,9 +31,9 @@ export default class SingleCollection extends React.Component { // FIND ID FROM 
         <div className="container">
           <div className="row">
             <div className="col-md-8 sep-top-md">
-            	<div className="row">
-            		{collectiongrid}
-            	</div>            	
+						<div className="row">
+						{collectiongrid}
+						</div>
             </div>
             <div className="col-md-4 sep-top-md">
               <dl className="metadata">
@@ -54,7 +49,7 @@ export default class SingleCollection extends React.Component { // FIND ID FROM 
               <li><a className="cursorp"><i className="fa fa-facebook fa-lg"></i>&nbsp; 150</a></li>
               <li><a className="cursorp"><i className="fa fa-twitter fa-lg"></i>&nbsp; 150</a></li>
               <li><a className="cursorp"><i className="fa fa-pinterest fa-lg"></i>&nbsp; 150</a></li>
-              </ul>  
+              </ul>
             </div>
           </div>
         </div>
@@ -63,8 +58,13 @@ export default class SingleCollection extends React.Component { // FIND ID FROM 
       </div>
 		);
 	}
+
+	_increaseLike = () => {
+		CollectionsActions.increment(this.props.params.collectionId);
+	}
 }
 
 SingleCollection.propTypes = {
-	CollectionsStore: React.PropTypes.object
+	CollectionsStore: React.PropTypes.object,
+	params: React.PropTypes.object
 };

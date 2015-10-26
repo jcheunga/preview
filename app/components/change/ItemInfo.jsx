@@ -15,8 +15,7 @@ export default class ItemInfo extends React.Component {
 		let getsingleid = this.props.singleid.size >= 1 ? singleidarray[0].get('id') : null;
 
 		const panel = this.props.images.toKeyedSeq().map((images, key) => {
-      return (<SingleInfo id={key} key={key} name={images.get('name')} brand={images.get('brand')} category={images.get('category')}
-      	price={images.get('price')} url={images.get('url')} image={images.get('imglink')} singleid={getsingleid} collectioncost={this.props.collectioncost}/>);
+      return (<SingleInfo id={key} key={key} name={images.get('name')} brand={images.get('brand')} category={images.get('category')} price={images.get('price')} url={images.get('url')} image={images.get('imglink')} singleid={getsingleid} collectioncost={this.props.collectioncost}/>);
     }).toArray();
 
 		return (

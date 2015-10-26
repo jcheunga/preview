@@ -1,8 +1,7 @@
 import React from 'react';
 import Immutable from 'immutable';
 import CollectionGrid from 'components/change/collectiongrid';
-import CollectionFilters from 'components/change/collectionfilters';
-import { Row, Col, Grid } from 'react-bootstrap';
+import { Row, Grid } from 'react-bootstrap';
 import Heading from 'components/change/Heading';
 import PreFooter from 'components/change/PreFooter';
 
@@ -16,8 +15,7 @@ export default class Collection extends React.Component { // LOOP THROUGH COLLEC
 		return (
 			<div>
 			<Grid>
-			<Row><CollectionFilters/></Row>
-			<Heading heading={'COLLECTIONS'} subheading={'Check out the latest and greatest collections made by you.'}/>			
+			<Heading heading={'COLLECTIONS'} subheading={'Check out the latest and greatest collections made by you.'}/>
 			<Row>{singleCollection}</Row>
 			</Grid>
 			<PreFooter/>

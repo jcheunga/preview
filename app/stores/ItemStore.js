@@ -36,7 +36,7 @@ class ItemStore {
 		if (!Immutable.OrderedMap.isOrderedMap(this.tempItem)) {
 			this.tempItem = fromJSOrdered(this.tempItem);
 		}
-		
+
 		this.savedCollection = {};
 		this.collectionCost = 0;
 	}
@@ -103,7 +103,7 @@ class ItemStore {
 		const partialurl = 'http://localhost:3000/collection/';
 		const collectionurl = partialurl + collectionid;
 		delete this.savedCollection.url;
-		this.savedCollection.url = collectionurl;		
+		this.savedCollection.url = collectionurl;
 		this.emitChange();
 	}
 

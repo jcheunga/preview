@@ -1,5 +1,5 @@
 import React from 'react';
-import { Input, Button, DropdownButton, MenuItem } from 'react-bootstrap';
+import { Input, Button } from 'react-bootstrap';
 import ItemActions from 'actions/ItemActions';
 import isurl from 'utils/isurl';
 import styles from 'scss/components/_singleimage';
@@ -97,7 +97,7 @@ export default class TopTextInput extends React.Component {
 			<div className={styles.urlinput}>
 			<Input type="text" placeholder="Enter URL for product" value={this.state.inputval} onChange={this.handleUrlChange} onKeyDown={this._onKeyDown} ref="enterUrl" bsStyle={this.inputbsStyle()} buttonAfter={getImageButton}/>
 			</div>
-			
+
 			{errormessage}
 			</div>
 		);

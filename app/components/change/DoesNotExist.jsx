@@ -7,6 +7,3 @@ export default class DoesNotExist extends React.Component {
 		);
 	}
 }
-
-DoesNotExist.propTypes = {	
-};

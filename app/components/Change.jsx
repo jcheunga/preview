@@ -13,10 +13,10 @@ export default class Change extends React.Component {
     return (
 		<Grid>
 		<Row>
-		<Heading heading={'CREATE'} subheading={'This is where you create a collection to save or share'}/>	
+		<Heading heading={'CREATE'} subheading={'This is where you create a collection to save or share'}/>
 		<Col md={12}>
 		<Urlboxes/>
-		</Col>		
+		</Col>
 		</Row>
 		<Row>
 		<Col md={12}>

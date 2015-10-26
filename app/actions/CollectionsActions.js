@@ -2,7 +2,7 @@ import alt from 'altInstance';
 import ItemWebAPIUtils from 'utils/ItemWebAPIUtils';
 
 class CollectionsActions {
-	filter(data) {
+	filter() {
 	}
 
 	increment(id) {
@@ -10,8 +10,8 @@ class CollectionsActions {
 		ItemWebAPIUtils.updateLikes({ collectionid: id }, false, true);
 	}
 
-	create(data) {
-		
+	create() {
+
 	}
 }
 

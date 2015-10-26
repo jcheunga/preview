@@ -2,7 +2,7 @@ import React from 'react';
 
 export default class HomeInitial extends React.Component {
 	render() {
-		return (                
+		return (
       <div className="bg-primary">
         <div className="row">
           <div className="col-md-4 text-center sep-top-md sep-bottom-md">

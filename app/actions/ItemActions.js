@@ -4,7 +4,7 @@ import ItemWebAPIUtils from 'utils/ItemWebAPIUtils';
 class ItemActions {
 
 	create(data) {
-		const id = Date.now()+Math.floor(Math.random()*1000).toString(); // CHANGE THIS ID TO SOMETHING ELSE IF PROBLEMS
+		const id = Date.now() + Math.floor(Math.random() * 1000).toString();
 		const finaldata = {
 			id: id,
 			url: data.url,
@@ -39,7 +39,7 @@ class ItemActions {
 	}
 
 	share(collection) {
-		const colid = Date.now()+Math.floor(Math.random()*1000).toString();		
+		const colid = Date.now() + Math.floor(Math.random() * 1000).toString();
 		const sharedata = {
 			collectionid: colid,
 			imagecollection: collection.collection,

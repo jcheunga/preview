@@ -5,7 +5,7 @@ export default class NotFound extends React.Component {
 		return (
 			<div className="sep-top-lg sep-bottom-lg text-center">
 				<h4>404 Not Found</h4>
-			</div>			
+			</div>
 		);
 	}
 }

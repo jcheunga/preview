@@ -2,26 +2,18 @@ import React from 'react';
 import SingleImage from 'components/change/singleimage';
 import Immutable from 'immutable';
 import { Button, Row, Col } from 'react-bootstrap';
-// import ItemInfo from 'components/change/iteminfo';
 import ItemActions from 'actions/ItemActions';
 import ItemInfo from 'components/change/iteminfo';
 
 export default class ImageCollection extends React.Component { // pagination
-	shareCollecton = () => {
-    let sharecollectiondata = {
-      collection: this.props.images,
-      collectioncost: this.props.collectioncost
-    };
-  	ItemActions.share(sharecollectiondata);
-  }
 
 	render() {
 		let singleidarray = this.props.singleid.toArray();
-		let getsingleid = this.props.singleid.size >= 1 ? singleidarray[0].get('id') : null;
+    let getsingleid = this.props.singleid.size >= 1 ? singleidarray[0].get('id') : null;
 
 		const collection = this.props.images.toKeyedSeq().map((images, key) => {
-      return (<Col md={4} key={key}><SingleImage id={key} key={key} name={images.get('name')} brand={images.get('brand')} category={images.get('category')}
-      	price={images.get('price')} url={images.get('url')} image={images.get('imglink')} singleid={getsingleid}/></Col>);
+      return (
+        <Col md={4} key={key}><SingleImage id={key} key={key} name={images.get('name')} brand={images.get('brand')} category={images.get('category')}	price={images.get('price')} url={images.get('url')} image={images.get('imglink')} singleid={getsingleid}/></Col>);
     }).toArray();
 
     /*const tooltip = (<Tooltip><strong>Coming Soon</strong></Tooltip>);
@@ -50,6 +42,14 @@ export default class ImageCollection extends React.Component { // pagination
       </Row>
 		);
 	}
+
+  shareCollecton = () => {
+    let sharecollectiondata = {
+      collection: this.props.images,
+      collectioncost: this.props.collectioncost
+    };
+    ItemActions.share(sharecollectiondata);
+  }
 }
 
 ImageCollection.propTypes = {
