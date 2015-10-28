@@ -9,13 +9,13 @@ export default class Footer extends React.Component {
           <div className="container">
             <div className="row">
               <div className="col-md-12 text-center">
-              <Link to="/">Home</Link>
-              <Link to="/about">About</Link>
-              <Link to="/collections">Collections</Link>
+              <small><Link to="/">Home</Link></small>
+              <small><Link to="/about">About</Link></small>
+              <small><Link to="/collections">Collections</Link></small>        
               </div>
             </div>
             <div className="row">
-              <div className="col-md-12 text-center sep-top-xs"><small>&copy; Copyright Preview 2015.</small></div>
+              <div className="col-md-12 text-center sep-top-xs">&copy; Copyright Preview 2015.</div>
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 {
   "name": "Preview",
   "version": "1.0.0",
-  "description": "A simple app to share collections with people",
+  "description": "A simple app to share collections with people based on react-webpack-node boilerplate",
   "main": "index.js",
   "scripts": {
     "start": "set NODE_ENV=production && node server/index.js",
