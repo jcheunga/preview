@@ -3,7 +3,6 @@ import AltContainer from 'alt/AltContainer';
 import UserStore from 'stores/UserStore';
 import Navigation from 'components/Navigation';
 import ItemStore from 'stores/ItemStore';
-import Footer from 'components/Footer';
 import CollectionsStore from 'stores/CollectionsStore';
 
 import 'scss/main';
@@ -34,7 +33,6 @@ export default class App extends React.Component {
       }}>
         <Navigation />
         {this.props.children}
-        <Footer />
       </AltContainer>
       </div>
     );

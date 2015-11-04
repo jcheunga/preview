@@ -1,9 +1,10 @@
 import React from 'react';
 import Immutable from 'immutable';
-import CollectionGrid from 'components/change/collectiongrid';
+import CollectionGrid from 'components/change/CollectionGrid';
 import { Row, Grid } from 'react-bootstrap';
 import Heading from 'components/change/Heading';
 import PreFooter from 'components/change/PreFooter';
+import Footer from 'components/Footer';
 
 export default class Collection extends React.Component { // LOOP THROUGH COLLECTIONS AND FILTER TABS OR BUTTONS // DISPLAY COLLECTION PRICE TOTAL
 	render() {
@@ -14,11 +15,14 @@ export default class Collection extends React.Component { // LOOP THROUGH COLLEC
 
 		return (
 			<div>
+			<div className="vh80">
 			<Grid>
 			<Heading heading={'COLLECTIONS'} subheading={'Check out the latest and greatest collections made by you.'}/>
 			<Row>{singleCollection}</Row>
 			</Grid>
+			</div>
 			<PreFooter/>
+			<Footer />
 			</div>
 		);
 	}

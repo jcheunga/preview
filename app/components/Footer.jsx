@@ -11,7 +11,7 @@ export default class Footer extends React.Component {
               <div className="col-md-12 text-center">
               <small><Link to="/">Home</Link></small>
               <small><Link to="/about">About</Link></small>
-              <small><Link to="/collections">Collections</Link></small>        
+              <small><Link to="/collections">Collections</Link></small>
               </div>
             </div>
             <div className="row">

@@ -2,11 +2,13 @@ import React from 'react';
 import Heading from 'components/change/Heading';
 import { Link } from 'react-router';
 import PreFooter from 'components/change/PreFooter';
+import Footer from 'components/Footer';
 
 export default class About extends React.Component {
   render() {
     return (
       <div>
+      <div className="vh80">
       <section className="sep-bottom-2x">
         <div className="container">
           <div className="row">
@@ -34,7 +36,9 @@ export default class About extends React.Component {
           </div>
         </div>
       </section>
+      </div>
       <PreFooter/>
+      <Footer />
       </div>
     );
   }

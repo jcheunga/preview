@@ -2,6 +2,7 @@ import React from 'react';
 import CollectionsActions from 'actions/CollectionsActions';
 import SingleCollectionGrid from 'components/change/SingleCollectionGrid';
 import PreFooter from 'components/change/PreFooter';
+import Footer from 'components/Footer';
 
 export default class SingleCollection extends React.Component { // FIND ID FROM COLLECTIONS IF IT DOESNT EXIST DISPLAY NO COLLECTION FOUND // ADD COMMENTS
 
@@ -27,6 +28,7 @@ export default class SingleCollection extends React.Component { // FIND ID FROM 
 		}
 		return (
 			<div>
+			<div className="vh80">
 			<section className="sep-bottom-2x">
         <div className="container">
           <div className="row">
@@ -54,7 +56,9 @@ export default class SingleCollection extends React.Component { // FIND ID FROM 
           </div>
         </div>
       </section>
+      </div>
       <PreFooter/>
+      <Footer />
       </div>
 		);
 	}
