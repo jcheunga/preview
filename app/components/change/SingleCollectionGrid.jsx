@@ -4,7 +4,7 @@ import { Thumbnail, Button, OverlayTrigger, Popover } from 'react-bootstrap';
 export default class SingleCollectionGrid extends React.Component { // BOOTSTRAP POPOVER FOR DESCRIPTION
 	render() {
 		return (
-			<div key={this.props.id} className="col-md-4">
+			<div key={this.props.id} className="col-md-4 col-xs-4">
 				<Thumbnail src={this.props.image}/>
 				<OverlayTrigger trigger="click" rootClose placement="bottom" overlay={
 					<Popover>
